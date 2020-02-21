@@ -1,10 +1,14 @@
 {
-  "name": "scoops_ahoy",
+  "name": "simple-vanilla-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "server": "simplehttpserver",
+    "webpack:dev": "webpack -w --mode development",
+    "webpack:prod": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
