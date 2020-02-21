@@ -1,5 +1,7 @@
 # Simple Vanilla Boilerplate w/ Jest and Webpack
 
+![ice cream](https://media2.giphy.com/media/cCEt1ShfzOa3u/giphy.gif)
+
 This boilerplate makes it easy to make testable front end code. It includes:
 
 - `webpack`
