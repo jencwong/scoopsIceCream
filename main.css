@@ -1,0 +1,69 @@
+/* ==== GENERAL STYLING =====*/
+
+body {
+  background: #0a34c3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-images > img {
+  width: 100%;
+}
+
+h1 {
+  font-family: "Lato";
+  font-weight: 800;
+  font-size: 5em;
+  margin-top: -1%;
+  color: white;
+  text-shadow: 1px 1px grey;
+  letter-spacing: 1.5px;
+}
+
+/* ======= CAROUSEL SECTION =======*/
+.carousel-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-images {
+  width: 80%;
+  padding: 30px;
+  background: white;
+  border-radius: 50px;
+  /* border-box ensures images inside the container */
+  box-sizing: border-box;
+  box-shadow: 2px 2px lightgray;
+}
+
+.carousel-images img {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-button {
+  align-self: center;
+  background: lightgray;
+  color: #888;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px lightgray;
+}
+
+.carousel-button:hover {
+  cursor: pointer;
+  background: #b1192d;
+  box-shadow: 1px 1px orangered;
+  color: white;
+}
+
+.carousel-images img:first-of-type {
+  display: block;
+}

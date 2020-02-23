@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoops Ahoy Ice Cream</title>
+    <!---STYLES-->
+    <link rel="stylesheet" href="main.css" />
+    <!---FONTS--->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+    <!----SCRIPTS-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
 
-  <script src="dist/main.js"></script>
-</body>
+  <body>
+    <script src="dist/main.js"></script>
+    <div class="container">
+      <div class="header-logo">
+        <img src="images/Scoops_Ahoy_Logo.jpg" alt="Scoops Ahoy Logo" />
+        <h1>Ice Cream Parlor</h1>
+      </div>
+      <div class="carousel-container">
+        <!----previous button-->
+        <div class="carousel-button previous">
+          <!--- from linearicons icon font -->
+          <span class="lnr lnr-chevron-left"></span>
+        </div>
+        <!--images-->
+        <div class="carousel-images">
+          <img
+            src="images/Scoops-Ahoy-Shop-Stranger-Things-Steve-Brittany.jpg"
+            alt="Brittany and Steve"
+          />
+          <img
+            src="images/Scoops-Ahoy-USS-Butterscotch-Fancy-Cone.jpg"
+            alt="Butterscotch Cone"
+          />
+          <img
+            src="images/Scoops-Ahoy-USS-Butterscotch-Sundae.jpg"
+            alt="Butterscotch-Sundae"
+          />
+          <img src="images/Scoops-Ahoy-Elevenade-Freeze.jpg" alt="Elevenage" />
+        </div>
+        <!----next button -->
+        <div class="carousel-button next">
+          <!----from linearicons icon font-->
+          <span class="lnr lnr-chevron-right"></span>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
