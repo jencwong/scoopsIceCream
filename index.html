@@ -28,7 +28,7 @@
     <script src="dist/main.js"></script>
     <div class="container">
       <div class="header-logo">
-        <img src="images/Scoops_Ahoy_Logo.jpg" alt="Scoops Ahoy Logo" />
+        <img src="images/Scoops_Ahoy_Logo_burned.png" alt="Scoops Ahoy Logo" />
         <h1>Ice Cream Parlor</h1>
       </div>
       <div class="carousel-container">
@@ -58,6 +58,34 @@
           <!----from linearicons icon font-->
           <span class="lnr lnr-chevron-right"></span>
         </div>
+      </div>
+
+      <!-----The Modal-->
+      <div id="steveImg">
+        <!-- Modal Content-->
+        <h2 id="query">Ask Captain Steve!</h2>
+        <!---- form input fields --->
+        <form id="chat">
+          <div id="containerChat">
+            <input
+              type="text"
+              placeholder="type your question"
+              id="input-box1"
+            ></input>
+            <button type="submit" id="button1">submit</button>
+            <img src="images/Stranger-Things-Steve.jpg" alt="Ask Steve" />
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+
+            <div class="modal-content">
+              <span class="close">&times; </span>
+              <p id="chat-message">Dialogue</p>
+            </div>
+
+            
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </body>

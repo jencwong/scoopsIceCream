@@ -1,5 +1,22 @@
 console.log("Scoops Ahoy connected to app.js!");
 
+const displayModal = () => {
+  $("#myModal").css("display", "flex");
+};
+
+let arrKid = [
+  "Turns out I'm a pretty damn good babysitter",
+  "Man, kids are the worst! Who needs 'em, anyway?",
+  "I will turn your monster kids into angels!",
+  "Kids know they can't mess with me!"
+];
+
+const validZipCode = (str) {
+
+}
+
+const endpoint = "https://project.wnyc.org/ice-cream/data/places.json​"
+
 $(() => {
   let currentImgIndex = 0;
   let highestIndex = $(".carousel-images").children().length - 1;
@@ -44,5 +61,28 @@ $(() => {
       .children()
       .eq(currentImgIndex)
       .css("display", "block");
+  });
+
+  $("#button1").on("click", event => {
+    event.preventDefault();
+    question = $("#input-box1")
+      .val()
+      .toLowerCase();
+    console.log(question);
+
+    if (question.includes("scoops ahoy")) {
+      //   $("#myModal").css("display", "flex");
+      displayModal();
+
+      $("#chat-message").text("Scoops Ahoy!");
+    } else if (question.includes("where " || "located" || "found" || "find")) {
+      //   $("#myModal").css("display", "flex");
+      displayModal();
+
+      $("#chat-message").text("Starcourt mall, Hawkins Indiana");
+    } else if (question.includes("kid")) {
+      displayModal();
+      $("#chat-message").text(arrKid[Math.floor(Math.random() * 3) + 1]);
+    }
   });
 });

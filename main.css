@@ -24,6 +24,17 @@ h1 {
   letter-spacing: 1.5px;
 }
 
+h2 {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 2.5em;
+  margin-top: -1%;
+  color: black;
+  text-shadow: 1px 1px grey;
+  letter-spacing: 1.5px;
+  text-decoration: center;
+}
+
 /* ======= CAROUSEL SECTION =======*/
 .carousel-container {
   width: 70%;
@@ -51,7 +62,7 @@ h1 {
   align-self: center;
   background: lightgray;
   color: #888;
-  padding: 10px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   box-shadow: 1px 1px lightgray;
@@ -66,4 +77,103 @@ h1 {
 
 .carousel-images img:first-of-type {
   display: block;
+}
+
+/* container for the modal */
+
+#steveImg {
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  box-sizing: border-box;
+  height: auto;
+  border-radius: 10px;
+}
+
+#steveImg img {
+  width: 30%;
+  border-radius: 10px;
+  float: right;
+}
+
+/* input field for query */
+
+form {
+  box-sizing: border-box;
+}
+
+#containerChat {
+  width: 100%;
+  height: 80%;
+}
+
+#input-box1 {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  padding: 20px 10px;
+  line-height: 28px;
+  margin: 1%;
+  padding: 0 1%;
+  vertical-align: middle;
+  text-align: center;
+  border: solid 2px rgba(71, 141, 211, 0.5);
+  font-size: 1.25em;
+}
+
+#button1 {
+  background-color: rgba(48, 165, 27, 0.657);
+  color: white;
+  width: 10%;
+  height: 50%;
+  font-size: 1.25em;
+  vertical-align: middle;
+  /* align-items: flex-end; */
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 80px; /* Location of the box */
+  left: 18%;
+  top: 10%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  width: 25%;
+  height: 28%;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: #fefefe;
+  opacity: 0.9;
+  font-size: 1.5em;
+  padding: 5px;
+  border: 1px solid #888;
+  border-radius: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
