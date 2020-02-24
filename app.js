@@ -11,11 +11,22 @@ let arrKid = [
   "Kids know they can't mess with me!"
 ];
 
-const validZipCode = (str) {
+var isValidZip = function(value) {
+  /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(value);
+};
 
-}
+const endpoint = "https://project.wnyc.org/ice-cream/data/places.json​";
 
-const endpoint = "https://project.wnyc.org/ice-cream/data/places.json​"
+const callAPI = async () => {
+  try {
+    const iceCreamNear = await fetch(endpoint);
+    console.log(iceCreamNear);
+    const data = await iceCreamNear.json();
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 $(() => {
   let currentImgIndex = 0;
@@ -83,6 +94,10 @@ $(() => {
     } else if (question.includes("kid")) {
       displayModal();
       $("#chat-message").text(arrKid[Math.floor(Math.random() * 3) + 1]);
+    } else if (question.includes("zip")) {
+      let zipCode = question.slice(-6, -1);
+      console.log(typeof zipCode);
+      callAPI();
     }
   });
 });
