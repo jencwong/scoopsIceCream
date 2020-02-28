@@ -15,14 +15,23 @@ var isValidZip = function(value) {
   /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(value);
 };
 
-const endpoint = "https://project.wnyc.org/ice-cream/data/places.json​";
+const endpoint = "https://project.wnyc.org/ice-cream/data/places.json";
+
+let zipCode = "";
+let ans = [];
 
 const callAPI = async () => {
   try {
+    console.log(endpoint);
     const iceCreamNear = await fetch(endpoint);
     console.log(iceCreamNear);
     const data = await iceCreamNear.json();
     console.log(data);
+    const filterZip = function() {
+      ans = data.filter(data => data.address.includes(zipCode));
+      return ans;
+    };
+    console.log(filterZip());
   } catch (err) {
     console.log(err);
   }
@@ -95,9 +104,19 @@ $(() => {
       displayModal();
       $("#chat-message").text(arrKid[Math.floor(Math.random() * 3) + 1]);
     } else if (question.includes("zip")) {
-      let zipCode = question.slice(-6, -1);
+      zipCode = question.slice(-6, -1);
       console.log(typeof zipCode);
       callAPI();
+      displayModal();
+      let html = "<ul>";
+      for (let i = 0; i < ans.length; i++) {
+        html += `<li>${ans[i].name}</li>`;
+      }
+      html += "</ul>";
+      $("#chat-message").append(html);
+    } else {
+      displayModal();
+      $("#chat-message").text("Yeah, that's a no.");
     }
   });
 });
