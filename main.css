@@ -151,16 +151,17 @@ form {
 
 /* Modal Content */
 .modal-content {
-  width: 25%;
-  height: 28%;
+  width: 50%;
+  height: 75%;
   margin-top: 5px;
   margin-right: 5px;
   background-color: #fefefe;
   opacity: 0.9;
-  font-size: 1.5em;
+  font-size: 0.75em;
   padding: 5px;
   border: 1px solid #888;
   border-radius: 20px;
+  line-height: 20px;
 }
 
 /* The Close Button */
